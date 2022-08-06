@@ -1,8 +1,5 @@
 var iex_key = "pk_c29c4bbe9d3043a2bb912e07eb4cbf94";
 var opt_symbols = "https://sandbox.iexapis.com/stable/ref-data/options/symbols/";
-https://sandbox.iexapis.com/stable/ref-data/options/symbols/fb?token=Tpk_49ea600b81bc49d88aaa89cb49695080
-
-
 
 //set the variables for getting the current data plus 1 month
 var today = new Date();
@@ -58,4 +55,11 @@ $(document).ready(function(){
         })
     })
    
+})
+var iex_sandbox = "Tpk_49ea600b81bc49d88aaa89cb49695080"
+
+fetch(`https://sandbox.iexapis.com/stable/stock/FB/quote?token=${iex_sandbox}`)
+.then(resp => resp.json())
+.then(value =>{
+    console.log(value)
 })

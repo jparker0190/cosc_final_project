@@ -7,7 +7,7 @@
     </head>
     <body> 
     
-        <h1>Pick a Trade below by it's ID to delete it from the table</h1>
+        
         <?php
         //connect to db
         $DBConnect = mysqli_connect('127.0.0.1','root','mysql','oppy');
@@ -20,11 +20,16 @@
             //table variable
             $TableName = 'stocks';
 
-            //select everything from the table
-            $SQLString = "select * from $TableName";
+            //select queries
+            $SQLString = "select * from $TableName order by ticker";
+            $most_expensive = "select max(cost) as max_cost from $TableName";
             $result = mysqli_query($DBConnect,$SQLString);
-            
+            $result_of_max = mysqli_query($DBConnect,$most_expensive);
+            $final_result = mysqli_fetch_array($result_of_max);
+            print "The most money spent on a trade was: "; echo $final_result['max_cost'];
+        
             if(mysqli_num_rows($result)>0){
+                    print "<h4>Here are the trades ordered by Ticker</h4>";
                     print"<table>";
                     print"<tr><th>Id</th><th>Trade_Date</th><th>Ticker</th><th>Qty</th>
                     <th>Price_Bought</th><th>Trade_Cost</th></tr>";
@@ -35,14 +40,11 @@
             }
             else
                 print"Nothing to display. Sorry.";
+            
             mysqli_free_result($result);
         }
         mysqli_close($DBConnect);
         
         ?>
-    <form method="POST" action = "delete.php">
-     <input placeholder="Select an Id from below to delete"type = "text" name = "id" />
-    <p><input type="submit" value="Submit" /></p>
-    </form>
-    </body>
+   </body>
 </html>
