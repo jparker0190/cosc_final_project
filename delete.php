@@ -26,7 +26,7 @@
             //table variable
             $TableName = 'stocks';
 
-            $DeleteThis = stripslashes($_POST['id']);
+            $DeleteThis = stripslashes($_POST['ID']);
             $SQLString = "delete from $TableName where id = '$DeleteThis'";
             $result = mysqli_query ($DBConnect, $SQLString);
             if(mysqli_affected_rows($DBConnect) == 0){
@@ -42,7 +42,7 @@
                 print"<tr><th>Id</th><th>Trade_Date</th><th>Ticker</th><th>Qty</th>
                 <th>Price_Bought</th><th>Trade_Cost</th></tr>";
                 while($Row = mysqli_fetch_assoc($result)){
-                    print"<tr><td>{$Row['id']}</td><td>{$Row['trade_date']}</td><td>{$Row['ticker']}</td>
+                    print"<tr><td>{$Row['ID']}</td><td>{$Row['trade_date']}</td><td>{$Row['ticker']}</td>
                     <td>{$Row['quantity']}</td><td>{$Row['current_price']}</td><td>{$Row['cost']}</td></tr>";
                 }
             }
