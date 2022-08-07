@@ -49,7 +49,7 @@
         
         ?>
     <form method="POST" action = "delete.php">
-     <input placeholder="Select an Id from below to delete"type = "text" name = "id" />
+     <input placeholder="Select an Id from below to delete"type = "text" name = "ID" />
     <p><input type="submit" value="Submit" /></p>
     </form>
     </body>
