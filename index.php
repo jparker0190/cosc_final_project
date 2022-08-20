@@ -11,9 +11,9 @@
         <div class="container-fluid">
              <div class="row">
                 <div class="col-6">
-                <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Please enter a stock ticker and quantity you wish to track</h5>
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+  Popover on top
+</button>
                     <form method="post" action="add_stock_portfolio.php">
                     <div class="mb-3">
                     <input type ="text" class="form-control" name="ticker" placeholder="Enter Ticker">
@@ -23,9 +23,6 @@
                     </div>
                     <button class="btn btn-primary mb-3"type="submit">Submit</button>
                     </form>
-                </div>
-                </div>
-                    
                 </div><!--ending div for col-6-->
                 <div class="col-6">
                     <table class="table table-hover table-dark table-bordered">
