@@ -1,6 +1,6 @@
 <html class="bg-dark">
     <head>
-            <?php include 'include.htm';?>
+        <?php include 'include.htm';?>
     </head>
     <?php
         //Get Heroku ClearDB connection information
