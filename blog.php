@@ -1,27 +1,22 @@
 <html>
     <head>
-
     <link rel="stylesheet"type="text/css"href="style.css">
-        <div id="nav">
-            <?php include 'include.htm';?>
-        </div>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <?php include 'include.htm';?>
     </head>
-    <body >
+    <body class="bg-dark">
         <div class="container-fluid">
-
-
+            <div id="cards-title">
+                Please enter your comments on your stock below.
+            </div>
             <div id="cards">
-    
-                </div>
                 <form method="post" action="add_comment.php">
                     <input type ="text" name="ticker" placeholder="Enter Ticker">
                     <input type="text" name="blogs" placeholder="Enter Content">
-                    
                     <button type="submit">Submit</button>
                 </form>
-
+            </div>
+            
+           
                 <div id="cards">
                 <table>
                     <?php
@@ -49,10 +44,10 @@
                         $Query = mysqli_query($DBConnect,$SQLSelect);
 
                         if(mysqli_num_rows($Query)>0){
-                            print"<tr><th>Trade_Date</th><th>Ticker</th><th>Qty</th><th>Price_Bought</th><th>Trade_Cost</th></tr>";
+                            print"<ul>";
 
                             while ($Row = mysqli_fetch_assoc($Query)){
-                                print"<tr class='text-white'style='height:10px;'><td>{$Row['ticker']}</td><td>{$Row['content']}</td><td>{$Row['current_price']}</td><td>{$Row['ytdchange']}</td></tr>";
+                                print"<li>{$Row['ticker']}</li><li>{$Row['blogs']}</li><li>{$Row['current_price']}</li><li>{$Row['ytdchange']}</li></li>";
                                 }
                         }
                         else{

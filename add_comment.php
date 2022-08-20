@@ -1,9 +1,6 @@
-<html>
+<html class="bg-dark">
     <head>
-        <link rel="stylesheet"type="text/css"href="style.css">
-        <div id="nav">
             <?php include 'include.htm';?>
-        </div>
     </head>
     <?php
         //Get Heroku ClearDB connection information
