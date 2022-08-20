@@ -47,7 +47,7 @@
                             print"<ul>";
 
                             while ($Row = mysqli_fetch_assoc($Query)){
-                                print"<li>{$Row['ticker']}</li><li>{$Row['blogs']}</li><li>{$Row['current_price']}</li><li>{$Row['ytdchange']}</li></li>";
+                                print"<li>{$Row['ticker']}</li><li>{$Row['blogs']}</li><li>{$Row['current_price']}</li><li>{$Row['ytdchange']}</li></ul>";
                                 }
                         }
                         else{
