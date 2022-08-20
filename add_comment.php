@@ -27,11 +27,11 @@
 
             //variables to hold data from the form
             $ticker = stripslashes($_POST['ticker']);
-            $comment = stripslashes($_POST['comment']);
+            $content = stripslashes($_POST['content']);
             $current_price = stripslashes($_POST['current_price']);
             $ytdchange = stripslashes($_POST['ytdchange']);
 
-            $SQLInsert = "insert into $Table(ticker, comment, current_price, ytdchange) values ('$ticker',$comment,$current_price,$ytdchange)";
+            $SQLInsert = "insert into $Table(ticker, content, current_price, ytdchange) values ('$ticker',$content,$current_price,$ytdchange)";
 
             //tell me if the above query string doesn't work
             if(mysqli_query($DBConnect,$SQLInsert)){
