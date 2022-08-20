@@ -20,7 +20,7 @@
                     <input type="text" class="form-control" name="ticker" placeholder="Enter Ticker">
                     </div>
                     <div class="mb-3">
-                        <textarea class="form-control" name="comment" rows="3"placeholder="Enter Content"></textarea>
+                        <input type="text"class="form-control" name="comment" rows="3"placeholder="Enter Content">
                     </div>
                     <div class="mb-3">
                         <input type="number" class="form-control" name="current_price" placeholder="Enter Current_Price">
