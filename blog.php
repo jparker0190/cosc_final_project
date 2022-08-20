@@ -22,6 +22,12 @@
                     <div class="mb-3">
                         <textarea class="form-control" name="comment" rows="3"placeholder="Enter Content"></textarea>
                     </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" name="current_price" placeholder="Enter Current_Price">
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" name="ytdchange" placeholder="Enter YTDChange">
+                    </div>
                     <button type="submit">Submit</button>
                 </form>
 
