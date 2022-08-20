@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     </head>
-    <body class="bg-dark">
+    <body >
         <div class="container-fluid">
 
 
@@ -37,13 +37,7 @@
                     // Connect to DB
                     $DBConnect = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
-                    $iex_key = 'pk_c29c4bbe9d3043a2bb912e07eb4cbf94';
-
-                    $iex_api = "https://sandbox.iexapis.com/stable/stock/FB/quote?token=$iex_key";
-                    $json = file_get_contents($iex_api);
-                    $iex_result = json_decode($json.ytdchange);
-                    print $iex_result;
-
+                   
                     if($DBConnect == false){
                         print "Sorry no DB conneciton Joe.";
                     }
