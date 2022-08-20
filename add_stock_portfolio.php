@@ -28,6 +28,14 @@
             $ticker = stripslashes($_POST['ticker']);
             $quantity = stripslashes($_POST['quantity']);
             $current_price = stripslashes($_POST['current_price']);
+
+            $iex_key = 'Tpk_49ea600b81bc49d88aaa89cb49695080';
+
+            $iex_api = "https://sandbox.iexapis.com/stable/stock/$ticker/quote?token=$iex_key";
+            $json = file_get_contents($iex_api);
+            $iex_result = json_decode($json);
+            $current_price = $iex_result->{'latestPrice'};
+            
             $cost = stripslashes($_POST['quantity']*$_POST['current_price']);
 
             $SQLInsert = "insert into $Table(ticker, quantity, current_price, cost) values ('$ticker',$quantity,$current_price,$cost)";

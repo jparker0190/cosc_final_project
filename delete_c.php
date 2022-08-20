@@ -36,15 +36,7 @@
             if(mysqli_num_rows($result)>0){
                 print"Here is everything in stocks with ID $DeleteThis deleted.";
                 while($Row = mysqli_fetch_assoc($result)){
-                    print " <div class='card'>
-                    <div class='card-header'>{$Row['ticker']} ID: {$Row['blog_id']}</div>
-                    <div class='card-body'>
-                    <blockquote class='blockquote mb-0'>
-                    <p>{$Row['content']}</p>
-                    <footer class='blockquote-footer'>Price: {$Row['current_price']} YTD: {$Row['ytdchange']}</footer>
-                    </blockquote>
-                    </div>
-                    </div><br>";
+                    print"<h4> Ticker: {$Row['ticker']} - Price: {$Row['current_price']} - YTDChange: {$Row['ytdchange']} ID: {$Row['blog_id']}</h4><p>{$Row['content']}</p>";
                 }
             }
             else
