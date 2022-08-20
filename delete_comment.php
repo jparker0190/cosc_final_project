@@ -44,7 +44,7 @@
         mysqli_close($DBConnect);
         
         ?>
-    <form method="POST" action = "delete.php">
+    <form method="POST" action = "delete_c.php">
      <input placeholder="Select an Id from below to delete"type = "text" name = "ID" />
     <p><input type="submit" value="Submit" /></p>
     </form>
