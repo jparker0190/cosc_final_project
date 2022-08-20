@@ -1,11 +1,10 @@
 <html>
     <head>
-        <link rel="stylesheet"type="text/css"href="style.css">
         <div id="nav">
             <?php include 'include.htm';?>
         </div>
     </head>
-    <body>
+    <body class="bg-dark text-white">
     <?php
 		//Get Heroku ClearDB connection information
         $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
