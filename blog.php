@@ -16,8 +16,8 @@
     
                 </div>
                 <form method="post" action="add_comment.php">
-                    <input type ="text" name="ticker" placeholder="Enter Ticker">
-                    <input type ="text" name="comment" placeholder="Enter Quantity">
+                    <input type ="text" name="stock" placeholder="Enter Ticker">
+                    <input type ="text" name="ticker" placeholder="Enter Quantity">
                     <input type ="number" name="current_price" placeholder="Enter Price"step=".01">
                     <input type ="number" name="ytdchange" placeholder="Enter Price"step=".01">
                     <button type="submit">Submit</button>
