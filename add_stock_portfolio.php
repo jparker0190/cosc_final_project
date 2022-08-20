@@ -35,7 +35,7 @@
             $iex_result = json_decode($json);
             $current_price = $iex_result->{'latestPrice'};
             
-            $cost = stripslashes($_POST['quantity']*$_POST['current_price']);
+            $cost = stripslashes($_POST['quantity']*$current_price);
 
             $SQLInsert = "insert into $Table(ticker, quantity, current_price, cost) values ('$ticker',$quantity,$current_price,$cost)";
 
