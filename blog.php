@@ -46,7 +46,7 @@
                         if(mysqli_num_rows($Query)>0){
                             
                             while ($Row = mysqli_fetch_assoc($Query)){
-                                print"<li><p> Ticker: {$Row['ticker']} - Price: {$Row['current_price']} - YTDChange: {$Row['ytdchange']}</p><p>{$Row['content']}</p></li>";
+                                print"<p> Ticker: {$Row['ticker']} - Price: {$Row['current_price']} - YTDChange: {$Row['ytdchange']}</p><p>{$Row['content']}</p>";
                                 }
                         }
                         else{
