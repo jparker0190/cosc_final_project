@@ -54,7 +54,7 @@
                             print"<tr><th>Trade_Date</th><th>Ticker</th><th>Qty</th><th>Price_Bought</th><th>Trade_Cost</th></tr>";
 
                             while ($Row = mysqli_fetch_assoc($Query)){
-                                print"<tr style='height:10px;'><td>{$Row['ticker']}</td><td>{$Row['comment']}</td><td>{$Row['current_price']}</td><td>{$Row['ytdchange']}</td></tr>";
+                                print"<tr style='height:10px;'><td>{$Row['ticker']}</td><td>{$Row['content']}</td><td>{$Row['current_price']}</td><td>{$Row['ytdchange']}</td></tr>";
                                 }
                         }
                         else{
