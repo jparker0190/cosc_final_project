@@ -41,7 +41,7 @@
                     <footer class='blockquote-footer'>Price: {$Row['current_price']} YTD: {$ytdchange}</footer>
                     </blockquote>
                     </div>
-                    </div>";
+                    </div><br>";
                     }
                     }
                     else

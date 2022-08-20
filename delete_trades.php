@@ -31,7 +31,7 @@
                     $result = mysqli_query($DBConnect,$SQLString);
 
                     if(mysqli_num_rows($result)>0){
-                    print"<table class='table table-hover table-sm'>";
+                    print"<table class='table table-hover table-sm table-dark table-bordered'>";
                     print"<tr><th>Id</th><th>Trade_Date</th><th>Ticker</th><th>Qty</th>
                     <th>Price_Bought</th><th>Trade_Cost</th></tr>";
                     while($Row = mysqli_fetch_assoc($result)){
