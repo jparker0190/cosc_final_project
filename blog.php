@@ -6,6 +6,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
+                <span class="badge text-bg-secondary">Please enter some thoughts your might have on investments.</span>
                 <form method="post" action="add_comment.php">
                     <div class="mb-3">
                         <input type ="text" class="form-control" name="ticker" placeholder="Enter Ticker">

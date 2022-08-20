@@ -1,6 +1,5 @@
 <html>
     <head>
-        <link rel="stylesheet"type="text/css"href="style.css">
             <?php include 'include.htm';?>
     </head>
     <body class="bg-dark"> 

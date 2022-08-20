@@ -11,9 +11,7 @@
         <div class="container-fluid">
              <div class="row">
                 <div class="col-6">
-                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
-  Popover on top
-</button>
+                    <span class="badge text-bg-secondary">Please enter a stock you would like to track</span>
                     <form method="post" action="add_stock_portfolio.php">
                     <div class="mb-3">
                     <input type ="text" class="form-control" name="ticker" placeholder="Enter Ticker">
@@ -25,6 +23,7 @@
                     </form>
                 </div><!--ending div for col-6-->
                 <div class="col-6">
+                    <span class="badge text-bg-secondary">Below is the current stocks you are currently tracking.</span>
                     <table class="table table-hover table-dark table-bordered">
                         <?php
 
@@ -70,6 +69,7 @@
              </div><!--ending div for row 1-->
              <div class="row">
              <div class="col-6">
+                <span class="badge text-bg-secondary">Below is some options pulled from the stocks you are tracking</span>
                 <table class="table table-hover table-dark table-bordered">
                 <thead>
                 <tr>
@@ -84,6 +84,7 @@
                 </table>
              </div><!--ending div for col-6-->
              <div class="col-6">
+                <span class="badge text-bg-secondary">Below is some relevant headlines for your stocks</span>
                 <table class="table table-hover table-dark table-bordered">
                 <thead>
                 <tr><th>Headline</th><th>URL</th><th>Ticker</th><th>Consensus</th></tr>
