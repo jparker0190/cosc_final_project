@@ -31,7 +31,7 @@
             $current_price = stripslashes($_POST['current_price']);
             $ytdchange = stripslashes($_POST['ytdchange']);
 
-            $SQLInsert = `insert into $Table(ticker, content, current_price, ytdchange) values ('$ticker',$blogs,$current_price,$ytdchange)`;
+            $SQLInsert = "insert into $Table(ticker, content, current_price, ytdchange) values ('$ticker','$blogs',$current_price,$ytdchange)";
 
             //tell me if the above query string doesn't work
             if(mysqli_query($DBConnect,$SQLInsert)){
