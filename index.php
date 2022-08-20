@@ -25,7 +25,7 @@
                     </form>
                 </div><!--ending div for col-6-->
                 <div class="col-6">
-                    <table class="table table-hover table-sm table-dark table-bordered">
+                    <table class="table table-hover table-dark table-bordered">
                         <?php
 
                         //Get Heroku ClearDB connection information
@@ -70,7 +70,7 @@
              </div><!--ending div for row 1-->
              <div class="row">
              <div class="col-6">
-                <table class="table table-hover table-sm table-dark table-bordered">
+                <table class="table table-hover table-dark table-bordered">
                 <thead>
                 <tr>
                 <th>Expiration</th>
@@ -84,7 +84,7 @@
                 </table>
              </div><!--ending div for col-6-->
              <div class="col-6">
-                <table class="table table-hover table-sm table-dark table-bordered">
+                <table class="table table-hover table-dark table-bordered">
                 <thead>
                 <tr><th>Headline</th><th>URL</th><th>Ticker</th><th>Consensus</th></tr>
                 </thead>

@@ -52,7 +52,7 @@
                                 <div class='card-body'>
                                 <blockquote class='blockquote mb-0'>
                                 <p>{$Row['content']}</p>
-                                <footer class='blockquote-footer'>Price: {$Row['current_price']} YTD: {$ytdchange}</footer>
+                                <footer class='blockquote-footer'>Price: {$Row['current_price']} YTD: {$ROW['ytdchange']}</footer>
                                 </blockquote>
                                 </div>
                                 </div><br>";
