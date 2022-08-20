@@ -17,10 +17,10 @@
                 </div>
                 <form method="post" action="add_comment.php">
                     <div class="mb-3">
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Ticker">
+                    <input type="text" class="form-control" name="ticker" placeholder="Enter Ticker">
                     </div>
                     <div class="mb-3">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"placeholder="Enter Content"></textarea>
+                        <textarea class="form-control" name="comment" rows="3"placeholder="Enter Content"></textarea>
                     </div>
                     <button type="submit">Submit</button>
                 </form>
