@@ -30,6 +30,7 @@
             $blogs = stripslashes($_POST['blogs']);
             $current_price = stripslashes($_POST['current_price']);
             $ytdchange = stripslashes($_POST['ytdchange']);
+            
 
             $SQLInsert = "insert into $Table(ticker, content, current_price, ytdchange) values ('$ticker','$blogs',$current_price,$ytdchange)";
 

@@ -18,8 +18,7 @@
                 <form method="post" action="add_comment.php">
                     <input type ="text" name="ticker" placeholder="Enter Ticker">
                     <input type="text" name="blogs" placeholder="Enter Content">
-                    <input type ="number" name="current_price" placeholder="Enter Price"step=".01">
-                    <input type ="number" name="ytdchange" placeholder="Enter YTD_Change"step=".01">
+                    
                     <button type="submit">Submit</button>
                 </form>
 
@@ -38,7 +37,12 @@
                     // Connect to DB
                     $DBConnect = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
+                    $iex_key = 'pk_c29c4bbe9d3043a2bb912e07eb4cbf94';
 
+                    $iex_api = "https://sandbox.iexapis.com/stable/stock/FB/quote?token=$iex_key";
+                    $json = file_get_contents($iex_api);
+                    $iex_result = json_decode($json.ytdchange);
+                    print $iex_result;
 
                     if($DBConnect == false){
                         print "Sorry no DB conneciton Joe.";
