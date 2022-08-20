@@ -16,18 +16,10 @@
     
                 </div>
                 <form method="post" action="add_comment.php">
-                    <div class="mb-3">
-                    <input type="text" class="form-control" name="ticker" placeholder="Enter Ticker">
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" name="comment" placeholder="Enter Content">
-                    </div>
-                    <div class="mb-3">
-                        <input type="number" class="form-control" name="current_price" placeholder="Enter Current_Price">
-                    </div>
-                    <div class="mb-3">
-                        <input type="number" class="form-control" name="ytdchange" placeholder="Enter YTDChange">
-                    </div>
+                    <input type ="text" name="ticker" placeholder="Enter Ticker">
+                    <input type ="text" name="comment" placeholder="Enter Quantity">
+                    <input type ="number" name="current_price" placeholder="Enter Price"step=".01">
+                    <input type ="number" name="ytdchange" placeholder="Enter Price"step=".01">
                     <button type="submit">Submit</button>
                 </form>
 

@@ -30,7 +30,45 @@
             </div>
             <div id="cards">
                 <table>
-                  
+                    <?php
+
+                    //Get Heroku ClearDB connection information
+                    $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+                    $cleardb_server = $cleardb_url["host"];
+                    $cleardb_username = $cleardb_url["user"];
+                    $cleardb_password = $cleardb_url["pass"];
+                    $cleardb_db = substr($cleardb_url["path"],1);
+                    $active_group = 'default';
+                    $query_builder = TRUE;
+                    // Connect to DB
+                    $DBConnect = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+
+
+
+                    if($DBConnect == false){
+                        print "Sorry no DB conneciton Joe.";
+                    }
+                    else{
+                        $Table = 'stocks';
+
+                        $SQLSelect = "select * from $Table order by cost desc";
+
+                        $Query = mysqli_query($DBConnect,$SQLSelect);
+
+                        if(mysqli_num_rows($Query)>0){
+                            print"<tr><th>Trade_Date</th><th>Ticker</th><th>Qty</th><th>Price_Bought</th><th>Trade_Cost</th></tr>";
+
+                            while ($Row = mysqli_fetch_assoc($Query)){
+                                print"<tr style='height:10px;'><td>{$Row['trade_date']}</td><td class='ticker'>{$Row['ticker']}</td><td>{$Row['quantity']}</td><td>{$Row['current_price']}</td><td>{$Row['cost']}</td></tr>";
+                                }
+                        }
+                        else{
+                            print"There is nothing to display.";
+                        }
+                        mysqli_free_result($Query);
+                    }
+                    mysqli_close($DBConnect);
+                    ?>
                 </table>
             </div>
             <br>
