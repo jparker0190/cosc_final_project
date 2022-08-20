@@ -16,22 +16,56 @@
     
                 </div>
                 <form method="post" action="add_comment.php">
-                    <input type ="text" name="stock" placeholder="Enter Ticker">
-                    <input type ="text" name="ticker" placeholder="Enter Quantity">
+                    <input type ="text" name="ticker" placeholder="Enter Ticker">
+                    <input type ="text" name="comment" placeholder="Enter Quantity">
                     <input type ="number" name="current_price" placeholder="Enter Price"step=".01">
                     <input type ="number" name="ytdchange" placeholder="Enter Price"step=".01">
                     <button type="submit">Submit</button>
                 </form>
 
-        <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-        </div>
-        </div>
+                <div id="cards">
+                <table>
+                    <?php
+
+                    //Get Heroku ClearDB connection information
+                    $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+                    $cleardb_server = $cleardb_url["host"];
+                    $cleardb_username = $cleardb_url["user"];
+                    $cleardb_password = $cleardb_url["pass"];
+                    $cleardb_db = substr($cleardb_url["path"],1);
+                    $active_group = 'default';
+                    $query_builder = TRUE;
+                    // Connect to DB
+                    $DBConnect = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+
+
+
+                    if($DBConnect == false){
+                        print "Sorry no DB conneciton Joe.";
+                    }
+                    else{
+                        $Table = 'blog';
+
+                        $SQLSelect = "select * from $Table";
+
+                        $Query = mysqli_query($DBConnect,$SQLSelect);
+
+                        if(mysqli_num_rows($Query)>0){
+                            print"<tr><th>Trade_Date</th><th>Ticker</th><th>Qty</th><th>Price_Bought</th><th>Trade_Cost</th></tr>";
+
+                            while ($Row = mysqli_fetch_assoc($Query)){
+                                print"<tr style='height:10px;'><td>{$Row['ticker']}</td><td>{$Row['comment']}</td><td>{$Row['current_price']}</td><td>{$Row['ytdchange']}</td></tr>";
+                                }
+                        }
+                        else{
+                            print"There is nothing to display.";
+                        }
+                        mysqli_free_result($Query);
+                    }
+                    mysqli_close($DBConnect);
+                    ?>
+                </table>
+            </div>
         </div><!--ending div for container-->
 
     </body>
