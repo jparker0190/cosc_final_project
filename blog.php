@@ -13,9 +13,9 @@
 
 
             <div id="cards">
-                    
+    
                 </div>
-                <form method="post" action="add_stock_portfolio.php">
+                <form method="post" action="add_comment.php">
                     <div class="mb-3">
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Ticker">
                     </div>
@@ -24,8 +24,6 @@
                     </div>
                     <button type="submit">Submit</button>
                 </form>
-            
-
 
         <div class="card" style="width: 18rem;">
         <div class="card-body">
