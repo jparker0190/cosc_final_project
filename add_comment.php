@@ -26,8 +26,8 @@
             $Table = 'blog';
 
             //variables to hold data from the form
-            $ticker = stripslashes($_POST['stock']);
-            $comment = stripslashes($_POST['ticker']);
+            $ticker = stripslashes($_POST['ticker']);
+            $comment = stripslashes($_POST['comment']);
             $current_price = stripslashes($_POST['current_price']);
             $ytdchange = stripslashes($_POST['ytdchange']);
 
