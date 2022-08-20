@@ -49,7 +49,7 @@
                             while ($Row = mysqli_fetch_assoc($Query)){
                                 print`<li>
                                     <p> Ticker: {$Row['ticker']} - Price: {$Row['current_price']} - YTDChange: {$Row['ytdchange']}</p>
-                                    <p>{$Row['blogs']}</p>
+                                    <p>{$Row['content']}</p>
                                     </li></ul>
                                 `;
                                 }
