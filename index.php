@@ -18,9 +18,6 @@
                     <div class="mb-3">
                     <input type ="number" class="form-control" name="quantity" placeholder="Enter Quantity">
                     </div>
-                    <div class="mb-3">
-                    <input type ="number" class="form-control" name="current_price" placeholder="Enter Price"step=".01">
-                    </div>
                     <button class="btn btn-primary mb-3"type="submit">Submit</button>
                     </form>
                 </div><!--ending div for col-6-->

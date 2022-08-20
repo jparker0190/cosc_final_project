@@ -27,7 +27,6 @@
             //variables to hold data from the form
             $ticker = stripslashes($_POST['ticker']);
             $quantity = stripslashes($_POST['quantity']);
-            $current_price = stripslashes($_POST['current_price']);
 
             $iex_key = 'Tpk_49ea600b81bc49d88aaa89cb49695080';
 
