@@ -27,7 +27,7 @@
             $TableName = 'blog';
 
             $DeleteThis = stripslashes($_POST['blog_id']);
-            $SQLString = "delete from $TableName where id = '$DeleteThis'";
+            $SQLString = "delete from $TableName where blog_id = '$DeleteThis'";
             $result = mysqli_query ($DBConnect, $SQLString);
             if(mysqli_affected_rows($DBConnect) == 0){
                 print"The data {$DeleteThis} doesn't exist. So nothing was deleted.<br>";
