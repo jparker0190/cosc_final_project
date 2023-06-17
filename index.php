@@ -58,7 +58,7 @@
                         }
                         }
                         else{
-                        print"There is nothing to display.";
+                        print"There is nothing to display.Sorry";
                         }
                         mysqli_free_result($Query);
                         }
