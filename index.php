@@ -41,7 +41,7 @@
                         ///seeing where this goes
 
                         if($DBConnect == false){
-                        print "Sorry no DB conneciton Joe.";
+                        print "Sorry no DB conneciton Joe. Yessir";
                         }
                         else{
                         $Table = 'stocks';
