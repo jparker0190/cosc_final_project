@@ -38,7 +38,7 @@
                         // Connect to DB
                         $DBConnect = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
-
+                        ///seeing where this goes
 
                         if($DBConnect == false){
                         print "Sorry no DB conneciton Joe.";
